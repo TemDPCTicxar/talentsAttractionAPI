@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/integrationstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_V3ajkJhgEe-5UKGzxpwFLg" type="Esb" name="vacantsCreateAPI" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_V3y-EJhgEe-5UKGzxpwFLg" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_V3y-FZhgEe-5UKGzxpwFLg" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_WFSngJhgEe-5UKGzxpwFLg" type="3668" fontName="Segoe UI">
+        <children xmi:type="notation:BasicCompartment" xmi:id="_WFTOkJhgEe-5UKGzxpwFLg" type="7044">
+          <children xmi:type="notation:Node" xmi:id="_WFbKYJhgEe-5UKGzxpwFLg" type="3669">
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_WFbKYZhgEe-5UKGzxpwFLg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_WFbKYphgEe-5UKGzxpwFLg" fontName="Segoe UI"/>
+            <styles xmi:type="notation:LineStyle" xmi:id="_WFbKY5hgEe-5UKGzxpwFLg"/>
+            <element xmi:type="esb:APIResource" href="vacantsCreateAPI.esb#//@server/@children.0/@resources.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WFbKZJhgEe-5UKGzxpwFLg" width="300" height="400"/>
+          </children>
+        </children>
+        <element xmi:type="esb:SynapseAPI" href="vacantsCreateAPI.esb#//@server/@children.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WFSngZhgEe-5UKGzxpwFLg" width="640" height="500"/>
+      </children>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_V3y-EZhgEe-5UKGzxpwFLg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_V3y-EphgEe-5UKGzxpwFLg" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_V3y-E5hgEe-5UKGzxpwFLg"/>
+    <element xmi:type="esb:EsbServer" href="vacantsCreateAPI.esb#//@server"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V3y-FJhgEe-5UKGzxpwFLg"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_V3ajkZhgEe-5UKGzxpwFLg"/>
+  <element xmi:type="esb:EsbDiagram" href="vacantsCreateAPI.esb#/"/>
+</notation:Diagram>

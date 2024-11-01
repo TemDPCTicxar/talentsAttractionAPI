@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="VacantsCreatePOSTEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/VacantsCreatePOSTEndpoint.xml</file>
+    </artifact>
+    <artifact name="VacantsCreatePOSTInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/VacantsCreatePOSTInSeq.xml</file>
+    </artifact>
+    <artifact name="vacantsCreateAPI" groupId="com.axa.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/vacantsCreateAPI.xml</file>
+    </artifact>
+    <artifact name="vacantsCreateAPI_swagger" groupId="com.axa.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/vacantsCreateAPI_swagger.yaml</file>
+    </artifact>
+    <artifact name="vacantsCreateAPI_metadata" groupId="com.axa.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/vacantsCreateAPI_metadata.yaml</file>
+    </artifact>
+    <artifact name="VacantsCreatePOSTFaultSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/VacantsCreatePOSTFaultSeq.xml</file>
+    </artifact>
+</artifacts>
