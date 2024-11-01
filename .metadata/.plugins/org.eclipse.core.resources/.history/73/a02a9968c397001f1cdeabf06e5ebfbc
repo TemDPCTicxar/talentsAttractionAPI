@@ -1,0 +1,11 @@
+---
+key: "talentsAttractionAPI-1.0.0"
+name : "talentsAttractionAPI"
+displayName : "talentsAttractionAPI"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "@wso2MIBaseUrl/utilityManagement/talentsAttractionAPI/v1/vacants/create"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

@@ -13,4 +13,12 @@
   <packaging>pom</packaging>
   <name>AXAColpatria.talentsAttractionAPI.Configs_module</name>
   <description>AXAColpatria.talentsAttractionAPI.Configs_module</description>
+  <modules>
+    <module>api/talentsAttractionAPI</module>
+    <module>metadata/talentsAttractionAPI_swagger</module>
+    <module>metadata/talentsAttractionAPI_metadata</module>
+    <module>sequences/TalentsAttractionVacantsCreatePOSTInSeq</module>
+    <module>endpoints/TalentsAttractionVacantsCreatePOSTEndpoint</module>
+    <module>sequences/TalentsAttractionAPIFaultSequence</module>
+  </modules>
 </project>

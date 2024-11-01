@@ -1,0 +1,23 @@
+openapi: 3.0.1
+info:
+  title: talentsAttractionAPI
+  description: API Definition of talentsAttractionAPI
+  version: 1.0.0
+servers:
+- url: @wso2MIBaseUrl/utilityManagement/talentsAttractionAPI/v1
+paths:
+  /vacants/create:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
