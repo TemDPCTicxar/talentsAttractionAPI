@@ -1,0 +1,11 @@
+---
+key: "vacantsCreateAPI-1.0.0"
+name : "vacantsCreateAPI"
+displayName : "vacantsCreateAPI"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://tmms.axacolpatria.co:3189/utilityManagement/vacantsCreateAPI/v1"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"
