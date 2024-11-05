@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/integrationstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_0D6lIJhlEe-5UKGzxpwFLg" type="Esb" name="talentsAttractionAPI" measurementUnit="Pixel">
-  <children xmi:type="notation:Node" xmi:id="_0EjeUJhlEe-5UKGzxpwFLg" type="2001">
-    <children xmi:type="notation:DecorationNode" xmi:id="_0EjeVZhlEe-5UKGzxpwFLg" type="7001">
-      <children xmi:type="notation:Shape" xmi:id="_0TEbcJhlEe-5UKGzxpwFLg" type="3668" fontName="Segoe UI">
-        <children xmi:type="notation:BasicCompartment" xmi:id="_0TEbcphlEe-5UKGzxpwFLg" type="7044">
-          <children xmi:type="notation:Node" xmi:id="_0TKiEJhlEe-5UKGzxpwFLg" type="3669">
-            <styles xmi:type="notation:DescriptionStyle" xmi:id="_0TKiEZhlEe-5UKGzxpwFLg"/>
-            <styles xmi:type="notation:FontStyle" xmi:id="_0TKiEphlEe-5UKGzxpwFLg" fontName="Segoe UI"/>
-            <styles xmi:type="notation:LineStyle" xmi:id="_0TKiE5hlEe-5UKGzxpwFLg"/>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/integrationstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_PpgxsJhyEe-5UKGzxpwFLg" type="Esb" name="talentsAttractionAPI" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_PqELUJhyEe-5UKGzxpwFLg" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_PqELVZhyEe-5UKGzxpwFLg" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_P3zsYJhyEe-5UKGzxpwFLg" type="3668" fontName="Segoe UI">
+        <children xmi:type="notation:BasicCompartment" xmi:id="_P3zsYphyEe-5UKGzxpwFLg" type="7044">
+          <children xmi:type="notation:Node" xmi:id="_P38PQJhyEe-5UKGzxpwFLg" type="3669">
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_P38PQZhyEe-5UKGzxpwFLg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_P38PQphyEe-5UKGzxpwFLg" fontName="Segoe UI"/>
+            <styles xmi:type="notation:LineStyle" xmi:id="_P38PQ5hyEe-5UKGzxpwFLg"/>
             <element xmi:type="esb:APIResource" href="talentsAttractionAPI.esb#//@server/@children.0/@resources.0"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0TKiFJhlEe-5UKGzxpwFLg" width="300" height="400"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P38PRJhyEe-5UKGzxpwFLg" width="300" height="400"/>
           </children>
         </children>
         <element xmi:type="esb:SynapseAPI" href="talentsAttractionAPI.esb#//@server/@children.0"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0TEbcZhlEe-5UKGzxpwFLg" width="640" height="500"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P3zsYZhyEe-5UKGzxpwFLg" width="640" height="500"/>
       </children>
     </children>
-    <styles xmi:type="notation:DescriptionStyle" xmi:id="_0EjeUZhlEe-5UKGzxpwFLg"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_0EjeUphlEe-5UKGzxpwFLg" fontName="Segoe UI"/>
-    <styles xmi:type="notation:LineStyle" xmi:id="_0EjeU5hlEe-5UKGzxpwFLg"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_PqELUZhyEe-5UKGzxpwFLg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_PqELUphyEe-5UKGzxpwFLg" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_PqELU5hyEe-5UKGzxpwFLg"/>
     <element xmi:type="esb:EsbServer" href="talentsAttractionAPI.esb#//@server"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0EjeVJhlEe-5UKGzxpwFLg"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PqELVJhyEe-5UKGzxpwFLg"/>
   </children>
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_0D6lIZhlEe-5UKGzxpwFLg"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_PpgxsZhyEe-5UKGzxpwFLg"/>
   <element xmi:type="esb:EsbDiagram" href="talentsAttractionAPI.esb#/"/>
 </notation:Diagram>

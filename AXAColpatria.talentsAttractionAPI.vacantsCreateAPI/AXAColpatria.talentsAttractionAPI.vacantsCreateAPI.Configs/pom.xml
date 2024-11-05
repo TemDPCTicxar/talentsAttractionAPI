@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.example</groupId>
+    <groupId>com.axa</groupId>
     <artifactId>AXAColpatria.talentsAttractionAPI.vacantsCreateAPI</artifactId>
     <version>1.0.0</version>
   </parent>
@@ -67,7 +67,7 @@
                         <token>${vault.token}</token>
                         <paths>
                             <path>
-                                <name>${vault.path}/utilityManagement/notificationsAPI/v4</name>
+                                <name>${vault.path}/utilityManagement/vacantsCreateAPI/v4</name>
                                 <mappings>
                                     <mapping>
                                         <key>wso2MIBaseUrl</key>

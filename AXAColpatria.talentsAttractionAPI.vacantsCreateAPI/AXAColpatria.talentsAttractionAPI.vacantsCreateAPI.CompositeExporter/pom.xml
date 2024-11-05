@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.example</groupId>
+    <groupId>com.axa</groupId>
     <artifactId>AXAColpatria.talentsAttractionAPI.vacantsCreateAPI</artifactId>
     <version>1.0.0</version>
   </parent>
@@ -14,8 +14,52 @@
   <name>AXAColpatria.talentsAttractionAPI.vacantsCreateAPI.CompositeExporter</name>
   <description>AXAColpatria.talentsAttractionAPI.vacantsCreateAPI.CompositeExporter</description>
   <properties>
+    <com.axa.sequence_._VacantsCreatePOSTInSeq>capp/EnterpriseServiceBus</com.axa.sequence_._VacantsCreatePOSTInSeq>
+    <com.axa.metadata_._vacantsCreateAPI_swagger>capp/EnterpriseServiceBus</com.axa.metadata_._vacantsCreateAPI_swagger>
+    <com.axa.api_._vacantsCreateAPI>capp/EnterpriseServiceBus</com.axa.api_._vacantsCreateAPI>
+    <com.axa.sequence_._VacantsCreatePOSTFaultSeq>capp/EnterpriseServiceBus</com.axa.sequence_._VacantsCreatePOSTFaultSeq>
+    <com.axa.endpoint_._VacantsCreatePOSTEndpoint>capp/EnterpriseServiceBus</com.axa.endpoint_._VacantsCreatePOSTEndpoint>
+    <com.axa.metadata_._vacantsCreateAPI_metadata>capp/EnterpriseServiceBus</com.axa.metadata_._vacantsCreateAPI_metadata>
     <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,datasource/datasource=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,synapse/metadata=yaml,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
   </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.axa.metadata</groupId>
+      <artifactId>vacantsCreateAPI_metadata</artifactId>
+      <version>1.0.0</version>
+      <type>yaml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.axa.metadata</groupId>
+      <artifactId>vacantsCreateAPI_swagger</artifactId>
+      <version>1.0.0</version>
+      <type>yaml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.axa.api</groupId>
+      <artifactId>vacantsCreateAPI</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.axa.endpoint</groupId>
+      <artifactId>VacantsCreatePOSTEndpoint</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.axa.sequence</groupId>
+      <artifactId>VacantsCreatePOSTFaultSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.axa.sequence</groupId>
+      <artifactId>VacantsCreatePOSTInSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+  </dependencies>
   <repositories>
     <repository>
       <releases>
