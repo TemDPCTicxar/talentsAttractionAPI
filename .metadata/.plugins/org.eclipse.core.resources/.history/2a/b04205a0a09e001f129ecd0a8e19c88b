@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="VacantsCreatePOSTInSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="custom">
+        <property name="Entrada seq" value="Entra a la secuencia VacantsCreatePOSTInseq"/>
+    </log>
+    <enrich>
+        <source clone="true" type="body"/>
+        <target property="InputRequest" type="property"/>
+    </enrich>
+    <log level="custom">
+        <property expression="get-property('InputRequest')" name="InputRequestLog"/>
+    </log>
+    <!-- <property expression="hashicorp:vault-lookup('@vault.path/utilityManagement/vacantsCreateAPI/v1/vacants/create/POST',  'VacantsCreatePOSTEndpoint')" name="uri.var.url" scope="default" type="STRING"/>
+    <property expression="hashicorp:vault-lookup('@vault.path/utilityManagement/vacantsCreateAPI/v1/vacants/create/POST',  'grant_type')" name="grant_type_vault" scope="default" type="STRING"/> -->
+    <property expression="fn:concat('Basic ', get-property('') )" name="fulltoken" scope="default" type="STRING"/>
+    <!-- <property name="grant_type" scope="default" type="STRING" expression="get-property('grant_type_vault')"/> -->
+    <property name="grant_type" scope="default" type="STRING" value="client_credential_user"/>
+    <property name="email" scope="default" type="STRING" value="test.axa@magneto365.com"/>
+    <header expression="get-property('fulltoken')" name="Authorization" scope="transport"/>
+    <payloadFactory media-type="json">
+        <format>{"grant_type":"$1","email":"$2"}</format>
+        <args>
+            <arg evaluator="xml" expression="get-property('grant_type')" xmlns:ns="http://org.apache.synapse/xsd"/>
+            <arg evaluator="xml" expression="get-property('email')" xmlns:ns="http://org.apache.synapse/xsd"/>
+        </args>
+    </payloadFactory>
+    <header name="Content-Type" scope="transport" value="application/x-www-form-urlencoded"/>
+    <property name="messageType" scope="axis2" type="STRING" value="application/x-www-form-urlencoded"/>
+    <property name="DISABLE_CHUNKING" scope="axis2" type="STRING" value="true"/>
+    <property name="FORCE_HTTP_1.0" scope="axis2" type="STRING" value="true"/>
+    <call>
+        <endpoint key="VacantsCreateTokenPOSTEndpoint"/>
+    </call>
+    <log level="full">
+        <property name="salida token" value="despues de llamar el token"/>
+        <property expression="json-eval($.access_token)" name="access_token"/>
+    </log>
+    <property expression="json-eval($.access_token)" name="access_token" scope="default" type="STRING"/>
+    <header expression="fn:concat('Bearer ', get-property('access_token'))" name="Authorization" scope="transport"/>
+    <enrich>
+        <source clone="true" property="InputRequest" type="property"/>
+        <target type="body"/>
+    </enrich>
+    <call>
+        <endpoint key="VacantsCreatePOSTEndpoint"/>
+    </call>
+    <filter regex="201" source="$axis2:HTTP_SC">
+        <then>
+            <log/>
+            <payloadFactory media-type="json">
+                <format>{&#xd;
+    "MsgRsHdr": {&#xd;
+        "error": null&#xd;
+    },&#xd;
+    "body": {&#xd;
+        "results": $1&#xd;
+    }&#xd;
+}</format>
+                <args>
+                    <arg evaluator="json" expression="$"/>
+                </args>
+            </payloadFactory>
+            <property description="Asignar HTTP Code 200" name="HTTP_SC" scope="axis2" type="INTEGER" value="200"/>
+        </then>
+        <else>
+            <filter regex="429" source="$axis2:HTTP_SC">
+                <then>
+                    <log/>
+                    <payloadFactory media-type="json">
+                        <format>{&#xd;
+        "MsgRsHdr": {&#xd;
+            "error": {&#xd;
+                "Status": {&#xd;
+                    "StatusCode": 200,&#xd;
+                    "Severity": null,&#xd;
+                    "StatusDesc": "La consulta no está disponible por el momento, por favor intente más tarde",&#xd;
+                    "AdditionalStatus": {&#xd;
+                        "ServerStatusCode": 200,&#xd;
+                        "Category": "Error de negocio",&#xd;
+                        "StatusDesc": "$1"&#xd;
+                    }&#xd;
+                }&#xd;
+            }&#xd;
+        },&#xd;
+        "body": null&#xd;
+    }</format>
+                        <args>
+                            <arg evaluator="json" expression="$.message"/>
+                        </args>
+                    </payloadFactory>
+                    <property description="Asignar HTTP Code 200" name="HTTP_SC" scope="axis2" type="INTEGER" value="200"/>
+                </then>
+                <else>
+                    <log/>
+                    <payloadFactory media-type="json">
+                        <format>{&#xd;
+        "MsgRsHdr": {&#xd;
+            "error": {&#xd;
+                "Status": {&#xd;
+                    "StatusCode": 200,&#xd;
+                    "Severity": null,&#xd;
+                    "StatusDesc": "La consulta no está disponible por el momento, por favor intente más tarde",&#xd;
+                    "AdditionalStatus": {&#xd;
+                        "ServerStatusCode": $1,&#xd;
+                        "Category": "Error Técnico",&#xd;
+                        "StatusDesc": "$2"&#xd;
+                    }&#xd;
+                }&#xd;
+            }&#xd;
+        },&#xd;
+        "body": null&#xd;
+    }</format>
+                        <args>
+                            <arg evaluator="xml" expression="$axis2:HTTP_SC"/>
+                            <arg evaluator="json" expression="$.message"/>
+                        </args>
+                    </payloadFactory>
+                    <property description="Asignar HTTP Code 200" name="HTTP_SC" scope="axis2" type="INTEGER" value="200"/>
+                </else>
+            </filter>
+        </else>
+    </filter>
+    <log/>
+    <respond/>
+</sequence>
