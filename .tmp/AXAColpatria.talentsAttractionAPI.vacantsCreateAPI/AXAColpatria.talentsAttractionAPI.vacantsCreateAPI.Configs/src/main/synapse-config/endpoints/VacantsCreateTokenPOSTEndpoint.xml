@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="VacantsCreateTokenPOSTEndpoint" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="post" uri-template="https://apiv2.magneto365.com/oauth2/v2/oauth2/token">
+        <suspendOnFailure>
+            <initialDuration>-1</initialDuration>
+            <progressionFactor>1.0</progressionFactor>
+        </suspendOnFailure>
+        <markForSuspension>
+            <retriesBeforeSuspension>0</retriesBeforeSuspension>
+        </markForSuspension>
+    </http>
+</endpoint>

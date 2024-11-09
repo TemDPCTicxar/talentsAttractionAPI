@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="TalentsAttractionVacantsCreatePOSTInSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log>
+        <property name="Entrada" value="Entra a la secuencia TalentsAttractionVacantsCreatePOSTInSeq"/>
+    </log>
+    <call>
+        <endpoint key="TalentsAttractionVacantsCreatePOSTEndpoint"/>
+    </call>
+    <log>
+        <property name="Salida" value="Salida de la secuencia TalentsAttractionVacantsCreatePOSTInSeq"/>
+    </log>
+    <respond/>
+</sequence>

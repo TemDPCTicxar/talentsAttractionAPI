@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="VacantsCreatePOSTInSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log/>
+    <property expression="hashicorp:vault-lookup('@vault.path/utilityManagement/vacantsCreateAPI/v1/vacants/create/POST',  'VacantsCreatePOSTEndpoint')" name="uri.var.url" scope="default" type="STRING"/>
+    <call>
+        <endpoint key="VacantsCreatePOSTEndpoint"/>
+    </call>
+    <log/>
+    <respond/>
+</sequence>

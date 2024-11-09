@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/utilityManagement/vacantsCreateAPI/v1" name="vacantsCreateAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource faultSequence="VacantsCreatePOSTFaultSeq" inSequence="VacantsCreatePOSTInSeq" methods="POST" uri-template="/vacants/create">
+        <outSequence/>
+    </resource>
+</api>

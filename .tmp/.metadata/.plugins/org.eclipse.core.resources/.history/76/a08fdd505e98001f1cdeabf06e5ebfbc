@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/vacants/create" name="vacantsCreateAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence/>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
