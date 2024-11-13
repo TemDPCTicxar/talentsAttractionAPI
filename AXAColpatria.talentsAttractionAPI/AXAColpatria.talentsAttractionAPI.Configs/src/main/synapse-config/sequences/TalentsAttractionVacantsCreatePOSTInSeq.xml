@@ -3,7 +3,7 @@
     <log>
         <property name="Entrada" value="Entra a la secuencia TalentsAttractionVacantsCreatePOSTInSeq"/>
     </log>
-    <property expression="hashicorp:vault-lookup('@vault.path/utilityManagement/talentsAttractionAPI/v1/vacants/create/POST',  'TalentsAttractionVacantsCreatePOSTEndpoint')" name="uri.var.url" scope="default" type="STRING"/>
+    <property expression="hashicorp:vault-lookup('@vault.path/secrets/utilityManagement/talentsAttractionAPI/v1/vacants/create/POST',  'TalentsAttractionVacantsCreatePOSTEndpoint')" name="uri.var.url" scope="default" type="STRING"/>
     <call>
         <endpoint key="TalentsAttractionVacantsCreatePOSTEndpoint"/>
     </call>
