@@ -4,7 +4,7 @@ name : "vacantsCreateAPI"
 displayName : "vacantsCreateAPI"
 description: "Sample API"
 version: "1.0.0"
-serviceUrl: "https://flows-86251971cd75b9e9-stg.magneto365.com/webhook/axa/create-vacant/utilityManagement/vacantsCreateAPI/v1"
+serviceUrl: "https://tmms.axacolpatria.co:3189/utilityManagement/vacantsCreateAPI/v1"
 definitionType: "OAS3"
 securityType: "BASIC"
 mutualSSLEnabled: false

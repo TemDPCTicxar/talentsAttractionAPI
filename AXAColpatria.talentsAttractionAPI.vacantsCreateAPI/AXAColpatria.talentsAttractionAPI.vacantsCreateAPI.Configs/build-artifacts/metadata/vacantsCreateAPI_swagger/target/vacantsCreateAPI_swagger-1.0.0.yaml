@@ -4,7 +4,7 @@ info:
   description: API Definition of vacantsCreateAPI
   version: 1.0.0
 servers:
-- url: https://flows-86251971cd75b9e9-stg.magneto365.com/webhook/axa/create-vacant/utilityManagement/vacantsCreateAPI/v1
+- url: https://tmms.axacolpatria.co:3189/utilityManagement/vacantsCreateAPI/v1
 paths:
   /vacants/create:
     post:

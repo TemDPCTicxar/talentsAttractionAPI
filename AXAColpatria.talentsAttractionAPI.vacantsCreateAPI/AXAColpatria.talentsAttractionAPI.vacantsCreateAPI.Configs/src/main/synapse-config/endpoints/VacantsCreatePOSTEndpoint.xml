@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint name="VacantsCreatePOSTEndpoint" xmlns="http://ws.apache.org/ns/synapse">
-    <http method="post" uri-template="https://integrator-staging.magneto365.com/api/v2/axa/create-vacant">
+    <http method="post" uri-template="{uri.var.url}">
         <suspendOnFailure>
             <initialDuration>-1</initialDuration>
             <progressionFactor>1.0</progressionFactor>
